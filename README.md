@@ -37,7 +37,7 @@ Instead of launching multiple EC2 instances (one each for Prometheus, Grafana, a
 
 ### 1. Clone this Repository
 ```bash
-git clone https://github.com/RamaChandraJP/Monitor.git
+git clone https://github.com/RamaChandraJP/EC2_Monitor.git
 apt install -y docker.io && docker-compose
 sudo usermod -aG docker ubuntu ##Log out & log back in to apply Docker group changes.
 mkdir monitor && cd monitor
