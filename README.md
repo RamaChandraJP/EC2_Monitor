@@ -7,7 +7,7 @@ The goal is to monitor the EC2 instance itself in a **cost-efficient** way — e
 
 ## 📐 Architecture
 
-<img width="1536" height="1024" alt="generated-image" src="https://github.com/user-attachments/assets/79666df7-293d-4126-a621-68e55f27e3dc" />
+<img width="600" height="600" alt="generated-image" src="https://github.com/user-attachments/assets/79666df7-293d-4126-a621-68e55f27e3dc" />
 
 **Flow:**
 - Terraform provisions an EC2 instance.
@@ -32,6 +32,8 @@ The goal is to monitor the EC2 instance itself in a **cost-efficient** way — e
 ### 1. Clone this Repository
 ```bash
 git clone https://github.com/RamaChandraJP/Monitor.git
+apt install -y docker.io && docker-compose
+sudo usermod -aG docker ubuntu ##Log out & log back in to apply Docker group changes.
 mkdir monitor && cd monitor
 docker compose up -d
 docker compose logs -f
