@@ -27,10 +27,23 @@ The goal is to monitor the EC2 instance itself in a **cost-efficient** way — e
 - **Grafana** → Metrics visualization  
 
 ---
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone this Repository
 ```bash
-git clone 
-cd <your-repo>
+git clone https://github.com/RamaChandraJP/Monitor.git
+mkdir monitor && cd monitor
+docker compose up -d
+docker compose logs -f
+```
+
+Access the Services
+Prometheus → http://<ec2-public-ip>:9090
+
+Grafana → http://<ec2-public-ip>:3000 (default login: admin/admin)
+
+Node Exporter → http://<ec2-public-ip>:9100/metrics
+
+<img width="1899" height="751" alt="image" src="https://github.com/user-attachments/assets/bbd033d0-4f37-429f-ae4e-2c772d3276cc" />
+
+
